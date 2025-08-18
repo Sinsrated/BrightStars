@@ -9,7 +9,7 @@ export default function About() {
    const router = useRouter();
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-8 sm:p-20">
-      <Navbar />
+      
       <main className="flex flex-col gap-8 items-center text-center">
  
         
@@ -24,6 +24,8 @@ export default function About() {
           <h2 className="text-2xl font-bold">About us</h2>
           <p className="mt-2 text-lg">Your journey to excellence in education starts here.</p>
         </section>
+        <div className="test">Hello Tailwind v4 👋</div>
+
       </main>
 
       <footer className="mt-8 text-sm text-gray-500 text-center">

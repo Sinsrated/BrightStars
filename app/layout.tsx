@@ -1,18 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import React from "react";
+import Navbar from "./components/navbar/navbar";
 
+const inter = Inter({subsets: ["latin"]});
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Bright Stars Nur & Pri School, Wankulukuku",
@@ -26,11 +19,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={ inter.className}>
+        <Navbar />
         {children}
       </body>
     </html>
   );
 }
+// components/FloatingIcon.js
+
+

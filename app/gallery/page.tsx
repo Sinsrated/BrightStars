@@ -9,7 +9,7 @@ export default function Gallery() {
    const router = useRouter();
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-8 sm:p-20">
-        <Navbar />
+        
       <main className="flex flex-col gap-8 items-center text-center">
       
     
