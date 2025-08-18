@@ -3,12 +3,12 @@
 @import "tailwindcss/forms";
 @import "tailwindcss/line-clamp";
 
-footer {
-  font-family: 'Times New Roman', Times, serif;
-  color: aqua;
-  background-color: black;
-  padding: 20px;
+body {
+  padding: 20px 20px 60px;
+  max-width: 680px;
+  margin: 0 auto;
 }
+
 
 
 
