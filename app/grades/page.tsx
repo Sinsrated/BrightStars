@@ -8,6 +8,8 @@ import Navbar from '../components/navbar/navbar';
 export default function Grades() {
    const router = useRouter();
   return (
+    <>
+    
     <div className="flex flex-col items-center justify-center min-h-screen p-8 sm:p-20">
      
       <main className="flex flex-col gap-8 items-center text-center">
@@ -31,5 +33,6 @@ export default function Grades() {
         <p>All rights reserved.</p>
       </footer>
     </div>
+    </>
   );
 }
