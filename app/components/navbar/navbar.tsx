@@ -13,7 +13,7 @@ export default function Home() {
         "absolute",
         "top-full",        // 👈 directly below navbar
         "left-0",
-        "bg-[#eb1c22]",    // 👈 same red background
+        "bg-[#eb1c22]/30",    // 👈 same red background
         "w-full",          // 👈 full width for mobile menu
         "p-4",
         "gap-4",
@@ -26,8 +26,8 @@ export default function Home() {
   }
 
   return (
-    <nav className="relative bg-[#eb1c22] text-white p-2 sm:p-3 md:flex md:justify-between md:items-center">
-      <div className="container mx-auto flex items-center justify-between">
+    <nav className="relative bg-[#eb1c22]/90  text-white p-4 sm:p-4 md:flex md:justify-between md:items-center ">
+      <div className="container mx-auto flex items-center justify-between ">
         
         {/* Logo */}
         <a href="/" className="flex items-center gap-2"> 
@@ -45,7 +45,7 @@ export default function Home() {
         <div className="hidden md:flex md:items-center">
           <Link href="/gallery" className="uppercase font-semibold px-4 py-2 mx-2 text-white hover:text-yellow-300">Gallery</Link>
           <Link href="/about" className="uppercase font-semibold px-4 py-2 mx-2 text-white hover:text-yellow-300">About us</Link>
-          <Link href="/grades" className="uppercase font-semibold px-4 py-2 mx-2 text-white hover:text-yellow-300">Grades</Link>
+          <Link href="/admissions" className="uppercase font-semibold px-4 py-2 mx-2 text-white hover:text-yellow-300">Admission</Link>
         </div>
 
         {/* Mobile Hamburger / Close Button */}
@@ -73,7 +73,7 @@ export default function Home() {
       <div className={getMenuClasses()}>
         <Link href="/gallery" className="uppercase font-semibold text-white hover:text-yellow-300" onClick={() => setIsOpen(false)}>Gallery</Link>
         <Link href="/about" className="uppercase font-semibold text-white hover:text-yellow-300" onClick={() => setIsOpen(false)}>About us</Link>
-        <Link href="/grades" className="uppercase font-semibold text-white hover:text-yellow-300" onClick={() => setIsOpen(false)}>Grades</Link>
+        <Link href="/admissions" className="uppercase font-semibold text-white hover:text-yellow-300" onClick={() => setIsOpen(false)}>Admission</Link>
       </div>
     </nav>
   )

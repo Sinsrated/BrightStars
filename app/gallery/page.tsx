@@ -64,11 +64,11 @@ export default function Gallery() {
   }, [openIndex, currentImages.length])
 
   return (
-    <div className="container bg-gray-400/30 mx-auto px-6 md:px-12 py-12 space-y-12">
+    <div className="flex flex-col min-h-screen bg-gray-500/40 text-gray-800">
       {/* Header */}
       <header className="text-center mb-12">
         {/* Desktop Carousel */}
-        <div className="hidden md:block border-2 border-yellow-300 mb-4">
+        <div className="hidden md:block mb-4">
           <Carousel
             slides={slides}
             interval={4000}
@@ -87,7 +87,7 @@ export default function Gallery() {
         </div>
 
         {/* Mobile Carousel */}
-        <div className="md:hidden border-2 border-yellow-300 mb-4">
+        <div className="md:hidden border-2 border-red-300 mb-4">
           <Carousel
             slides={slides}
             interval={4000}
@@ -104,29 +104,30 @@ export default function Gallery() {
             }}
           />
         </div>
-
+        <section className="py-4 bg-indigo-50 text-cente">
         <h1 className="text-4xl font-bold mb-2">Gallery</h1>
         <p className="text-gray-700">Explore our students’ activities and memories.</p>
+        </section>
       </header>
 
-      {/* Year Selection */}
-      <div className="flex justify-center gap-6 mb-8">
-        {Object.keys(imagesByYear).map((year) => (
-          <label key={year} className="flex items-center gap-2 cursor-pointer">
-            <input
-              type="radio"
-              value={year}
-              checked={selectedYear === year}
-              onChange={() => {
-                setSelectedYear(year)
-                setSelectedClass(null)
-              }}
-              className="accent-yellow-500 w-5 h-5"
-            />
-            <span className="font-semibold">{year}</span>
-          </label>
-        ))}
-      </div>
+{/* Year Selection */}
+<div className="flex justify-center gap-6 mb-8 year-selector">
+  {Object.keys(imagesByYear).map((year) => (
+    <label key={year} className="cursor-pointer">
+      <input
+        type="radio"
+        value={year}
+        checked={selectedYear === year}
+        onChange={() => {
+          setSelectedYear(year)
+          setSelectedClass(null)
+        }}
+      />
+      <span>{year}</span>
+    </label>
+  ))}
+</div>
+
 
       {/* Step 1: Select Class */}
       {!selectedClass && (
@@ -135,7 +136,7 @@ export default function Gallery() {
             <div
               key={cls}
               onClick={() => setSelectedClass(cls)}
-              className="cursor-pointer bg-gray-200 rounded p-6 text-center font-semibold hover:bg-gray-300 transition"
+              className="cursor-pointer bg-red-700/40 rounded p-6 text-center font-semibold hover:bg-red-600 transition"
             >
               {cls}
             </div>

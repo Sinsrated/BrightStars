@@ -22,10 +22,11 @@ export default function AboutUs() {
   ]
 
   return (
-    <div className="container mx-auto px-6 md:px-12 py-12 space-y-16 bg-gray-400/30">
+    <div className="flex flex-col min-h-screen bg-gray-500/40 text-gray-800">
       
       {/* Page Header */}
-      <header className="text-center text-white">
+      <section className="py-4  text-cente">
+      <header className="text-center text-black">
         <h1 className="text-4xl font-bold mb-2">Bright Stars Nursery & Primary School</h1>
         <p className="text-white">
             The Glory of God Will Shine.
@@ -40,7 +41,7 @@ export default function AboutUs() {
             onClick={() => setActiveTab(tab)}
             className={`px-4 py-2 rounded font-semibold transition ${
               activeTab === tab
-                ? "bg-yellow-400 text-black"
+                ? "bg-red-500 text-black"
                 : "bg-gray-200 text-gray-700 hover:bg-gray-300"
             }`}
           >
@@ -54,10 +55,11 @@ export default function AboutUs() {
           </button>
         ))}
       </div>
+      </section>
 
       {/* School Info & Map */}
       {activeTab === "school" && (
-        <section className="container border-2 border-yellow-400">
+        <section className="container  bg-red-500/80">
           <h2 className=" text-2xl font-semibold mb-6">Our School</h2>
           <p className="text-white mb-6">
             Bright Stars Primary School is located in Wankulukuku - Kabowa, Kampala. We provide quality education, nurture creativity, and promote discipline in young minds.
@@ -98,7 +100,7 @@ export default function AboutUs() {
 
       {/* Directors */}
       {activeTab === "directors" && (
-        <section className="container border-2 border-yellow-400">
+        <section className="container bg-red-500/80">
           <h2 className="text-2xl font-semibold mb-6">Directors</h2>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
             {directors.map((person, index) => (
@@ -120,7 +122,7 @@ export default function AboutUs() {
 
       {/* Teaching Staff */}
       {activeTab === "teaching" && (
-        <section className="container border-2 border-yellow-400">
+        <section className="container bg-red-500/80">
           <h2 className="text-2xl font-semibold mb-6">Teaching Staff</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {teachingStaff.map((person, index) => (
@@ -142,7 +144,7 @@ export default function AboutUs() {
 
       {/* Non-Teaching Staff */}
       {activeTab === "nonteaching" && (
-        <section className="container border-2 border-yellow-400  p-1">
+        <section className="container bg-red-500/80">
           <h2 className="text-2xl font-semibold mb-6">Non-Teaching Staff</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {nonTeachingStaff.map((person, index) => (

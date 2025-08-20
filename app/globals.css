@@ -49,6 +49,27 @@ html,body{
   font-weight: bold;
 }
 
+.year-selector input[type="radio"] {
+  display: none; /* hide the dots */
+}
+
+.year-selector label span {
+  display: inline-block;
+  padding: 0.55rem 1.5rem;
+  border-radius: 5px;
+  background-color: #e5e7eb; /* gray */
+  color: #111;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  
+}
+
+.year-selector input[type="radio"]:checked + span {
+  background-color: #ef4444; /* red */
+  color: white;
+}
+
+
 
 
 
